@@ -1,6 +1,8 @@
 import React from 'react';
 import './about.css';
 
+
+
 function About() {
   return (
     <div className="about">
@@ -16,16 +18,23 @@ function About() {
 
       <section className="about-main">
         <div className="logo-section">
-          <img src="path/to/logo.png" alt="DocAI Logo" className="logo" />
-          <h2>DocAI</h2>
+          <img src="/logoAbout.png" alt="DocAI Logo" className="logo" style={{ width: '300px', height: 'auto' }} />
         </div>
-        <div className="vision">
-          <h3>DocAI Vision</h3>
-          <p>SOS A</p>
-          <p>BLALAA</p>
-          <p>BLLLA</p>
-          <p>BLLLA BLLLA</p>
-          <p>BLLL A BLLLLLL ALLA</p>
+
+      </section>
+
+      <section className="features">
+        <div className="feature-box">
+          <span className="icon pill-icon"></span>
+          <p>DocAI can identify symptoms based on what the user inputs and suggest a diagnosis and treatment based on this.</p>
+        </div>
+        <div className="feature-box">
+          <span className="icon heart-icon"></span>
+          <p>DocAI provides quick and accessible healthcare support at no added cost by providing an immediate list of suggested medications.</p>
+        </div>
+        <div className="feature-box">
+          <span className="icon pharmacy-icon"></span>
+          <p>DocAI also includes the option to locate nearby pharmacies in order to purchase the necessary medications.</p>
         </div>
       </section>
 
@@ -35,3 +44,5 @@ function About() {
 }
 
 export default About;
+
+

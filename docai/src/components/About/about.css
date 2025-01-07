@@ -10,7 +10,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
+    padding: 0 4rem; /* This adds 4rem padding to left and right */
+   
   }
   
   .about-header h1 {
@@ -31,6 +33,13 @@
     color: #fff;
     text-decoration: none;
   }
+
+  .logo-container {
+    position: relative;
+    display: flex;
+    margin-left: 33.33%;
+  }
+  
   
   .about-main {
     margin: 30px 0;
@@ -40,7 +49,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 0px;
+    padding: 0px 300px;
+    margin: 0 auto; /* This will position it 1/3rd from the left */
   }
   
   .logo {
@@ -82,3 +93,16 @@
     content: '➕';
   }
   
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 5rem; /* Adjusts space between logo and text */
+  }
+  
+  .text-block {
+    color: white;
+  }
+  
+  .text-block p {
+    margin-bottom: 0.5rem;
+  }
