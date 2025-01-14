@@ -106,3 +106,126 @@
   .text-block p {
     margin-bottom: 0.5rem;
   }
+
+  /* Video container styles */
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Team section styles */
+.team-section {
+  padding: 4rem 2rem;
+  background-color: #1a237e; /* Deep blue background */
+  color: white;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Add this new CSS for the last row */
+.team-grid > *:nth-last-child(-n+2) {
+  grid-column-end: span 1;
+}
+
+.team-grid > *:nth-last-child(2) {
+  grid-column-start: 2;
+}
+
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* Top row - spans 2 columns each */
+  .team-grid > *:nth-child(-n+3) {
+    grid-column: span 2;
+  }
+  
+  /* Bottom row - spans 3 columns each, starting at column 2 */
+  .team-grid > *:nth-last-child(-n+2) {
+    grid-column: span 3;
+  }
+}
+
+/* Add container to help with centering */
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #1a237e;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.member-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.member-bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
